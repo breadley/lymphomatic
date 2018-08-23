@@ -12,4 +12,5 @@ On Windows, download repository and double-click algo.exe
 
 ## Usage
 As prompted, fill in a known immunohistochemistry name such as ```cd20``` or ```tdt```.
+
 Then when prompted, input the result: ```+``` or ```-```
