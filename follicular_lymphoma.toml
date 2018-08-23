@@ -5,12 +5,9 @@ description = '''
 
 '''
 
-# Proportion of all lymphomas (as decimal, with 0.2=20%)
-proportion = 0
-
 # must be in format ihc = ['ihc1','ihc2',etc.]
-always_positive_ihc = []
-always_negative_ihc = []
+always_positive_ihc = ['cd20','cd19','cd10']
+always_negative_ihc = ['cd5']
 usually_positive_ihc = []
 usually_negative_ihc = []
 
