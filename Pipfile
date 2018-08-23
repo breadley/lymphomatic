@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 toml = "*"
 pyinstaller = "*"
+"pypiwin32" = "*"
 
 [dev-packages]
 

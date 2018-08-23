@@ -1,0 +1,4 @@
+#pyinstaller docs
+build
+dist
+*.spec
