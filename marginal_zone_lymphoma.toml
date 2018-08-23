@@ -1,0 +1,17 @@
+# can be multiline.
+description = '''
+
+
+
+'''
+
+# must be one line, in format ihc = {ihc1='+',ihc2='-'}.
+always_positive_ihc = [CD20,CD19,CD10]
+always_negative_ihc = [CD5,CD25]
+usually_positive_ihc = []
+usually_negative_ihc = []
+
+# can be multiline, as strings separated by commas.
+differentials = [
+
+]
