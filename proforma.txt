@@ -5,7 +5,7 @@ description = '''
 
 '''
 
-# must be one line, in format ihc = {ihc1='+',ihc2='-'}.
+# must be in format ihc = ['ihc1','ihc2',etc.]
 always_positive_ihc = []
 always_negative_ihc = []
 usually_positive_ihc = []
@@ -15,3 +15,4 @@ usually_negative_ihc = []
 differentials = [
 
 ]
+
