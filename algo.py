@@ -123,21 +123,7 @@ def start_program():
 
 
 start_program()
-'''
-testa = Disease('hairy_cell_lymphoma.toml')
-testb = Disease('marginal_zone_lymphoma.toml')
-tdiseases = [testa,testb]
-testlist = [testa,testb]
-pos = set(['cd5'])
-neg = set(['cd10','cd25'])
-candidates, elim_pos, elim_neg = disease_eliminator(testlist,pos,neg)
 
-
-print('ahairy+',testa.always_positive_ihc)
-print('ahairy-',testa.always_negative_ihc)
-
-print('bmarg+',testb.always_positive_ihc)
-print('bmarg-',testb.always_negative_ihc)
 
 
 
