@@ -13,6 +13,7 @@ class Disease():
 		self.always_negative_ihc = set(map(str.lower,self.contents['always_negative_ihc']))
 		self.usually_positive_ihc = set(map(str.lower,self.contents['usually_positive_ihc']))
 		self.usually_negative_ihc = set(map(str.lower,self.contents['usually_negative_ihc']))
+		self.score = 0 
 
 	def __str__(self):
 		return self.name
@@ -24,7 +25,10 @@ class Disease():
 		except:
 			print('No contents in the file:',self.path)
 			# Don't create an object for this disease
-			return		
+			return	
+
+	def update_score(self,score):
+		self.score = score
 
 def search_diseases():
 	# This function goes through the folder and returns disease objects
@@ -42,8 +46,8 @@ def disease_eliminator(bloated_list,positives,negatives):
 	explanations_danger_pos = {}
 	explanations_danger_neg = {}
 	bloated_list = set(bloated_list)
-	real_life_positives = set(positives)
-	real_life_negatives = set(negatives)
+	real_life_positives = positives
+	real_life_negatives = negatives
 	eliminated = []
 
 	# go through the diseases
@@ -73,9 +77,50 @@ def disease_eliminator(bloated_list,positives,negatives):
 	survived = bloated_list - set(eliminated)
 	return survived, explanations_danger_pos, explanations_danger_neg
 
-def disease_scorer():
+def disease_scorer(ddx_list,positives,negatives):
 	# Takes a list of diseases and scores how many matched immuno results there are
-	pass
+	real_life_positives = positives
+	real_life_negatives = negatives
+	
+	# 2 points for an 'always positive' major match, 1 point for a 'usually positive' minor match
+	maj_pts = 2
+	min_pts = 1
+	
+	ranked_list = {}
+	
+	# go through differentials
+	for unranked_differential in ddx_list:
+		print("\ninspecting differential: ", unranked_differential.name)
+		
+		# positives
+		good_pos_major = real_life_positives.intersection(unranked_differential.always_positive_ihc)
+		good_pos_minor = real_life_positives.intersection(unranked_differential.usually_positive_ihc)
+		
+		# negatives
+		good_neg_major = real_life_negatives.intersection(unranked_differential.always_negative_ihc)
+		good_neg_minor = real_life_negatives.intersection(unranked_differential.usually_negative_ihc)
+		
+		# Calculate arbitrary score
+		points = maj_pts*len(good_pos_major)+min_pts*len(good_pos_minor)+maj_pts*len(good_neg_major)+min_pts*len(good_neg_minor)
+
+		# Attach points to disease
+		unranked_differential.update_score(points)
+		
+		# Add to ranking
+		ranked_list[unranked_differential] = unranked_differential.score
+		
+	# return ranked_list # of the form {diseas:1, disease:2, disease:3}
+	
+	return ranked_list
+
+def display_rankings(scoreboard):
+	# accepts a the dictionary scoreboard, prints the ranked results
+	
+	ranked = sorted(scoreboard.items(), key=lambda kv: kv[1])
+	print('\n\nscoreboard: ',ranked)
+
+	
+	print	
 
 def help_me_choose_ihc():
 	# This function takes the list of possible diseases
@@ -121,18 +166,8 @@ def start_program():
 		for killed_name,killed_ihc in eliminated_danger_neg.items():
 			print('\t%s eliminated (we have negative %s, but needed positive)'%(killed_name,killed_ihc))
 
+	scoreboard = disease_scorer(candidate_diseases,set(ihc_done_positive),set(ihc_done_negative))
+	display_rankings(scoreboard)
 
 start_program()
 
-
-
-
-
-
-
-
-
-
-
-
-'''
