@@ -8,6 +8,7 @@ Tool to navigate immunohistochemistry in haematological malignancies
 
 ## Setup
 On MacOS, .dmg coming soon &copy;
+
 On Windows, download repository and double-click algo.exe
 
 ## Usage
