@@ -91,6 +91,10 @@ def start_program():
 	list_of_diseases = search_diseases()
 	candidate_diseases, eliminated_needed_positive, eliminated_needed_negative = disease_eliminator(list_of_diseases,ihc_done_positive,ihc_done_negative)
 
+	print(candidate_diseases,'in the running')
+	print(eliminated_needed_positive,'eliminated, needed positive')
+	print(eliminated_needed_negative,'eliminated, needed negative')	
+
 
 
 
