@@ -1,0 +1,34 @@
+# can be multiline.
+description = '''
+
+AKA immunoproliferative small intestinal disease
+
+Most common heavy chain disease, possibly caused by campylobacter in low socioeconomic young adults.
+
+It is a variant of extranodal marginal zone lymphoma of MALT
+
+Defective alpha heavy chain immunoglobulin is secreted
+
+Features plasma cells and marginal zone cells, both without light chains.
+
+'''
+
+# Proportion of all lymphomas (as decimal, with 0.2=20%)
+proportion = 0
+
+# must be in format ihc = ['ihc1','ihc2',etc.]
+always_positive_ihc = []
+always_negative_ihc = []
+usually_positive_ihc = []
+usually_negative_ihc = []
+
+# can be multiline, as strings separated by commas.
+differentials = [
+
+]
+
+
+# Cytological features (can be multiline)
+cytology = [
+
+]

@@ -1,0 +1,32 @@
+# can be multiline.
+description = '''
+
+Variant HCL in the sense that there may be: 
+- lack of circumferential hairiness
+- strange morphology
+- other immune cells such as monocytes
+
+Not thought to be related to hairy cell leukaemia.
+
+
+'''
+
+# Proportion of all lymphomas (as decimal, with 0.2=20%)
+proportion = 0.002
+
+# must be in format ihc = ['ihc1','ihc2',etc.]
+always_positive_ihc = ['CD20','CD19','cd22', 'cyclin_d1']
+always_negative_ihc = ['cd25']
+usually_positive_ihc = []
+usually_negative_ihc = []
+
+# can be multiline, as strings separated by commas.
+differentials = [
+
+]
+
+
+# Cytological features (can be multiline)
+cytology = [
+
+]

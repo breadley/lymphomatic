@@ -1,0 +1,28 @@
+# can be multiline.
+description = '''
+
+Neoplasm of small B cells, plasma cells and plasmacytoid lymphocytes.
+
+Diagnosis of exclusion, consider all other B cell neoplasms.
+
+'''
+
+# Proportion of all lymphomas (as decimal, with 0.2=20%)
+proportion = 0
+
+# must be in format ihc = ['ihc1','ihc2',etc.]
+always_positive_ihc = ['cd19','cd20','cd22','cd79a','cd138']
+always_negative_ihc = []
+usually_positive_ihc = []
+usually_negative_ihc = ['cd5','cd10','cd23']
+
+# can be multiline, as strings separated by commas.
+differentials = [
+
+]
+
+
+# Cytological features (can be multiline)
+cytology = [
+
+]

@@ -5,6 +5,10 @@ AKA chronic lymphocytic leukaemia
 
 '''
 
+# Proportion of all lymphomas (as decimal, with 0.2=20%)
+# 7% of all non-hodgkin
+proportion = 0
+
 # must be in format ihc = ['ihc1','ihc2',etc.]
 always_positive_ihc = ['cd20','cd19','cd5','cd23']
 always_negative_ihc = []
