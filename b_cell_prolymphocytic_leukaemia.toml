@@ -1,7 +1,8 @@
 # can be multiline.
 description = '''
+Prolymphocyte neoplasm.
 
-
+SOX11 positivity or t(11;14)(q13:q32) (IGH/CCND1) are mantle cell lymphomas with leukaemic expression.
 
 '''
 
@@ -10,7 +11,7 @@ proportion = 0
 
 # must be in format ihc = ['ihc1','ihc2',etc.]
 always_positive_ihc = []
-always_negative_ihc = []
+always_negative_ihc = ['SOX11']
 usually_positive_ihc = []
 usually_negative_ihc = []
 
@@ -19,8 +20,3 @@ differentials = [
 
 ]
 
-
-# Cytological features (can be multiline)
-cytology = [
-
-]

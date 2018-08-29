@@ -1,7 +1,7 @@
 # can be multiline.
 description = '''
-
-
+Small B cell neoplasm that replaces splenic white pulp germinal centres.
+The cells extend to peripheral (marginal) larger cells with some blasts.
 
 '''
 
@@ -9,8 +9,8 @@ description = '''
 proportion = 0
 
 # must be in format ihc = ['ihc1','ihc2',etc.]
-always_positive_ihc = []
-always_negative_ihc = []
+always_positive_ihc = ['cd20','cd79a']
+always_negative_ihc = ['cd5','cd10','cd23','cd43','cyclin_d1','bcl6']
 usually_positive_ihc = []
 usually_negative_ihc = []
 
@@ -19,8 +19,3 @@ differentials = [
 
 ]
 
-
-# Cytological features (can be multiline)
-cytology = [
-
-]

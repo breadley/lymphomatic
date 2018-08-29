@@ -1,0 +1,18 @@
+# can be multiline.
+description = '''
+Indolent neoplasm of small mature lymphoid cells.
+
+Cells have oval nuclei, abundant 'hairy' cytoplasm.
+
+'''
+
+# IHC as follows
+always_positive_ihc = ['CD20','CD19','CD25', 'cd22', 'cyclin_d1']
+always_negative_ihc = ['CD5'] 
+usually_positive_ihc = []
+usually_negative_ihc = ['cd10']
+
+# can be multiline, as strings separated by commas.
+differentials = [
+
+]
