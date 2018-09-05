@@ -5,14 +5,12 @@ Indolent neoplasm of small mature lymphoid cells.
 Cells have oval nuclei, abundant 'hairy' cytoplasm.
 
 '''
-# Proportion of all lymphomas (as decimal, with 0.2=20%)
-proportion = 0.02
 
 # IHC as follows
-always_positive_ihc = ['CD20','CD19','CD25', 'cd22', 'cyclin_d1']
+always_positive_ihc = ['CD20','CD19','CD10','CD25', 'cd22', 'cyclin_d1']
 always_negative_ihc = ['CD5'] 
 usually_positive_ihc = []
-usually_negative_ihc = ['cd10']
+usually_negative_ihc = []
 
 # can be multiline, as strings separated by commas.
 differentials = [

@@ -117,10 +117,11 @@ def display_rankings(scoreboard):
 	# accepts a the dictionary scoreboard, prints the ranked results
 	
 	ranked = sorted(scoreboard.items(), key=lambda kv: kv[1])
-	print('\n\nscoreboard: ',ranked)
+	for disease in ranked:
+		print('\nCandidate: %s\n\tScore: %s\n---------------------'%(disease[0],disease[1]))
 
 	
-	print	
+	print(done)	
 
 def help_me_choose_ihc():
 	# This function takes the list of possible diseases
