@@ -7,6 +7,7 @@ name = "pypi"
 toml = "*"
 pyinstaller = "*"
 "pypiwin32" = "*"
+flask = "*"
 
 [dev-packages]
 
